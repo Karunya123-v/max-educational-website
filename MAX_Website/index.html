@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAX Educational Council</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="hero">
+    <nav>
+        <div class="logo">MAX Educational Council</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#brochure">Brochure</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-text">
+        <h1>Guiding Your Future, One Admission at a Time</h1>
+        <p>Helping students get admissions in their preferred fields</p>
+        <a href="#register" class="btn">Register Now</a>
+    </div>
+</header>
+
+<section id="about" class="section">
+    <h2>About Us</h2>
+    <p>We help students choose the right course and college based on their interest.</p>
+</section>
+
+<section id="services" class="section">
+    <h2>Fields We Assist With</h2>
+    <div class="services-container">
+
+        <div class="service-card">
+            <img src="engineering-icon.png">
+            <h3>Engineering</h3>
+        </div>
+
+        <div class="service-card">
+            <img src="management-icon.png">
+            <h3>Management</h3>
+        </div>
+
+        <div class="service-card">
+            <img src="arts-icon.png">
+            <h3>Arts</h3>
+        </div>
+
+        <div class="service-card">
+            <img src="science-icon.png">
+            <h3>Science</h3>
+        </div>
+
+    </div>
+</section>
+
+<section id="brochure" class="section brochure">
+    <h2>Our Brochure</h2>
+    <img src="brochure-preview.jpg" class="brochure-img">
+    <br><br>
+    <a href="MAX_Brochure.pdf" download>
+        <button class="btn">Download Brochure</button>
+    </a>
+</section>
+
+<section id="register" class="section">
+    <h2>Register Now</h2>
+
+    <form class="register-form" onsubmit="return showSuccess()">
+
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Phone Number" required>
+
+        <select id="field" required onchange="showCourses()">
+            <option value="">Select Your Field</option>
+            <option value="engineering">Engineering</option>
+            <option value="management">Management</option>
+            <option value="arts">Arts</option>
+            <option value="science">Science</option>
+        </select>
+
+        <div id="courseList"></div>
+
+        <button type="submit" class="btn">Submit</button>
+    </form>
+
+    <p id="successMsg">Registration Successful! We will contact you soon.</p>
+
+</section>
+
+<section id="contact" class="section contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@maxedu.com</p>
+    <p>Phone: +91 98765 43210</p>
+</section>
+
+<footer>
+    <p>&copy; 2026 MAX Educational Council</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
